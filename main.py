@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from player import *
 from asteroidfield import *
+import sys
 
 
 
@@ -37,6 +38,14 @@ def main():
                 return
         # Update Player
         updatable.update(dt)
+
+        # Check for collision
+        for a in asteroids:
+            if a.distance(player):
+                print("Game Over!")
+                sys.exit(0)
+
+
         # Draw the Player
         for thing in drawable:
             thing.draw(screen)
