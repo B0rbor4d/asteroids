@@ -50,7 +50,13 @@ def main():
             if a.distance(player):
                 print("Game Over!")
                 sys.exit(0)
-
+            for shot in shots:
+                if shot.distance(a):
+                    a.kill()
+                    shot.kill()
+                    
+        # check for ateroid hit
+        
 
         # Draw the Player
         for thing in drawable:
