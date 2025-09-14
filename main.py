@@ -52,7 +52,7 @@ def main():
                 sys.exit(0)
             for shot in shots:
                 if shot.distance(a):
-                    a.kill()
+                    a.split()
                     shot.kill()
                     
         # check for ateroid hit
